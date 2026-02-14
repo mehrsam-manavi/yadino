@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>سایت یادینو</title>
+</head>
+
+<body style="font-family:tahoma;text-align:center">
+
+<h2>ثبت نام</h2>
+<input id="name" placeholder="نام"><br><br>
+<input id="email" placeholder="ایمیل"><br><br>
+<input id="password" placeholder="رمز"><br><br>
+<button onclick="alert('ثبت‌نام انجام شد 😎')">ثبت نام</button>
+
+<hr>
+
+<h2>ورود</h2>
+<input id="loginEmail" placeholder="ایمیل"><br><br>
+<input id="loginPassword" placeholder="رمز"><br><br>
+<button onclick="alert('ورود انجام شد 😎')">ورود</button>
+
+</body>
+</html>
