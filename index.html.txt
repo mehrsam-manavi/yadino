@@ -9,6 +9,37 @@ body{
   background-size:600% 600%;
   animation:move 8s infinite;
 }
+button{
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background: linear-gradient(45deg,#00c3ff,#7a00ff);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  background: linear-gradient(45deg,#7a00ff,#00c3ff);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+<style>
+body {
+  font-family: 'Orbitron', sans-serif;  /* فونت تکنولوژی */
+  background: linear-gradient(270deg,#00c3ff,#7a00ff,#ffffff);
+  background-size:600% 600%;
+  animation:move 8s infinite;
+}
+@keyframes move {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+</style>
 
 @keyframes move{
   0%{background-position:0% 50%;}
@@ -16,6 +47,7 @@ body{
   100%{background-position:0% 50%;}
 }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -36,4 +68,5 @@ body{
 
 </body>
 </html>
+
 
