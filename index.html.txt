@@ -3,53 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>سایت یادینو</title>
-<style>
-body{
-  background: linear-gradient(270deg,#00c3ff,#7a00ff,#ffffff);
-  background-size:600% 600%;
-  animation:move 8s infinite;
-}
-button{
-  padding:12px 25px;
-  border:none;
-  border-radius:12px;
-  background: linear-gradient(45deg,#00c3ff,#7a00ff);
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
 
-button:hover{
-  background: linear-gradient(45deg,#7a00ff,#00c3ff);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-<style>
-body {
-  font-family: 'Orbitron', sans-serif;  /* فونت تکنولوژی */
-  background: linear-gradient(270deg,#00c3ff,#7a00ff,#ffffff);
-  background-size:600% 600%;
-  animation:move 8s infinite;
-}
-@keyframes move {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
-}
-</style>
-
-@keyframes move{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-</style>
+<!-- فونت تکنولوژی -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-/* پس‌زمینه متحرک */
+/* کل بدن سایت */
 body {
   font-family: 'Orbitron', sans-serif; /* فونت تکنولوژی */
   background: linear-gradient(270deg,#00c3ff,#7a00ff,#ffffff);
@@ -66,6 +25,15 @@ body {
   0% {background-position:0% 50%;}
   50% {background-position:100% 50%;}
   100% {background-position:0% 50%;}
+}
+
+/* فرم‌ها */
+input{
+  padding:10px;
+  margin:5px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
 }
 
 /* دکمه‌های خفن */
@@ -87,34 +55,42 @@ button:hover{
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
-/* فرم‌ها */
-input{
-  padding:10px;
-  margin:5px;
-  border:none;
-  border-radius:8px;
+/* بخش اصلی */
+.box{
+  margin-top:120px;
 }
 </style>
 
 </head>
 
-<body style="font-family:tahoma;text-align:center">
+<body>
 
-<h2>ثبت نام</h2>
-<input id="name" placeholder="نام"><br><br>
-<input id="email" placeholder="ایمیل"><br><br>
+<div class="box">
+<h2>ثبت نام یادینو</h2>
+
+<input id="email" placeholder="ایمیل"><br>
 <input id="password" placeholder="رمز"><br><br>
-<button onclick="alert('ثبت‌نام انجام شد 😎')">ثبت نام</button>
 
-<hr>
+<button onclick="send()">ثبت نام</button>
 
-<h2>ورود</h2>
-<input id="loginEmail" placeholder="ایمیل"><br><br>
-<input id="loginPassword" placeholder="رمز"><br><br>
-<button onclick="alert('ورود انجام شد 😎')">ورود</button>
+<p id="msg"></p>
+</div>
+
+<script>
+function send(){
+fetch("https://script.google.com/macros/s/AKfycbxpGtg6wFVPphoAN0Tn5tHL9Xio4d-peGe9StCiee4terGzSSJSKpF3afDzK8uWmqekYg/exec",{
+method:"POST",
+body: JSON.stringify({
+email: document.getElementById("email").value,
+password: document.getElementById("password").value
+})
+})
+.then(res=>res.text())
+.then(data=>{
+document.getElementById("msg").innerText="ثبت شد 😎";
+});
+}
+</script>
 
 </body>
 </html>
-
-
-
