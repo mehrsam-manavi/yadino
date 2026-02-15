@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>سایت یادینو</title>
+<style>
+body{
+  background: linear-gradient(270deg,#00c3ff,#7a00ff,#ffffff);
+  background-size:600% 600%;
+  animation:move 8s infinite;
+}
+
+@keyframes move{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+</style>
+
 </head>
 
 <body style="font-family:tahoma;text-align:center">
@@ -22,3 +36,4 @@
 
 </body>
 </html>
+
